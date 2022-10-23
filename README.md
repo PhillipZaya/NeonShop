@@ -1,11 +1,9 @@
 ## Use these commands to install and run backend.
-npm install
-npm run dev
+npm install then npm run dev
 
 
 ## Use these commands to install and run frontend.
-npm install
-npm start
+npm install then npm start
 
 it should Open http://localhost:3000 in your browser.
 
