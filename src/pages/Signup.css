@@ -1,0 +1,221 @@
+/* * {
+    background-color: black;
+} */
+.bubble {
+    position: relative;
+    left: 900px;
+    top: -300px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.25);
+    animation: animatebubble 4s ease-in-out infinite;
+}
+
+.bubble:nth-child(2) {
+    position: relative;
+    zoom: 0.45;
+    left: -10px;
+    top: 60px;
+    animation-delay: -4s;
+}
+
+.bubble:nth-child(3) {
+    position: relative;
+    zoom: 0.25;
+    right: -80px;
+    top: 500px;
+    animation-delay: -6s;
+}
+
+.bubble:nth-child(4) {
+    position: relative;
+    zoom: 0.35;
+    left: -120px;
+    bottom: -200px;
+    animation-delay: -3s;
+}
+
+.bubble:nth-child(5) {
+    position: relative;
+    zoom: 0.5;
+    left: 0px;
+    top: 200px;
+    animation-delay: -5s;
+}
+
+@keyframes animatebubble
+{
+    0%,100%
+    {
+        transform: translateY(-20px);
+    }
+    50%
+    {
+        transform: translateY(20px);
+    }
+}
+
+.bubble::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 45px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    filter: blur(2px);
+}
+
+.bubble::after {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    filter: blur(2px);
+}
+
+
+.bubble span {
+    position: absolute;
+    border-radius: 50%;
+}
+.bubble span:nth-child(1) {
+    inset: 10px;
+    border-left: 15px solid #0fb4ff;
+    filter: blur(8px);
+}
+.bubble span:nth-child(2) {
+    inset: 10px;
+    border-right: 15px solid #ff4484;
+    filter: blur(8px);
+}
+.bubble span:nth-child(3) {
+    inset: 20px;
+    border-top: 15px solid #ffeb3b;
+    filter: blur(8px);
+}
+.bubble span:nth-child(4) {
+    inset: 30px;
+    border-left: 15px solid #ff4484;
+    filter: blur(12px);
+}
+.bubble span:nth-child(5) {
+    inset: 10px;
+    border-bottom: 10px solid #fff;
+    filter: blur(8px);
+    transform: rotate(330deg);
+}
+
+
+.signup__form--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+/* Login css */
+.login__form--container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.scan {
+  font-family: consolas;
+    position: relative;
+    left: 600px;
+    top: -600px;
+    flex-direction: column;
+}
+.scan .fingerprint {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background: url(./fingerPrint/fingerPrint_01.png);
+    background-size: 300px;
+}
+.scan .fingerprint::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./fingerPrint/fingerPrint_02.png);
+    background-size: 300px;
+    animation: animatelogin1 4s ease-in-out infinite;
+}
+@keyframes animatelogin1
+{
+    0%,100%
+    {
+        height: 0%;
+    }
+    50%
+    {
+        height: 100%;
+    }
+}
+
+.scan .fingerprint::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #3fefef;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
+    animation: animatelogin2 4s ease-in-out infinite;
+}
+@keyframes animatelogin2
+{
+    0%,100%
+    {
+        top: 0%;
+    }
+    50%
+    {
+        top: 100%;
+    }
+}
+.scan h3 {
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: #3fefef;
+    filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
+    animation: animate_text 0.5s steps(1) infinite;
+}
+@keyframes animate_text
+{
+    0%,100%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .scan,
+    .bubble {
+        display: none;
+    }
+}
