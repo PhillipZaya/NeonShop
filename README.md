@@ -1,5 +1,17 @@
 ## Use these commands to install and run backend.
 npm install then npm run dev
+add .env file to connect.
+
+MONGO_USERNAME = 
+MONGO_PW = 
+
+cloudName:
+uploadPreset:
+CLOUD_NAME = 
+CLOUD_API_KEY = 
+CLOUD_API_SECRET = 
+
+STRIPE_SECRET =
 
 
 ## Use these commands to install and run frontend.
